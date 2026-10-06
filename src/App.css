@@ -8954,3 +8954,720 @@ body {
     margin-top: 20px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   MOBILE + TABLET RESPONSIVE FIX
+========================================================= */
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1024px) {
+
+  .navbar {
+    grid-template-columns: auto 1fr auto;
+    padding: 10px 18px;
+  }
+
+  .desktopNav {
+    display: none !important;
+  }
+
+  .mobileMenuBtn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brandText h2 {
+    font-size: 18px;
+  }
+
+  .brandText span {
+    font-size: 10px;
+  }
+
+  .pageContent {
+    padding-top: 74px;
+  }
+
+
+  /* HOME HERO */
+
+  .premiumHero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    padding:
+      70px 6%
+      60px;
+
+    text-align: center;
+  }
+
+  .premiumHeroContent,
+  .heroContent {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .heroTitle {
+    align-items: center !important;
+
+    max-width: 700px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: clamp(38px, 6vw, 54px);
+  }
+
+  .heroTitle span {
+    white-space: normal;
+  }
+
+  .premiumHero p,
+  .heroContent p {
+    max-width: 650px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heroActions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .heroTrustRow {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+
+  /* HERO IMAGE */
+
+  .heroVisualStage {
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    transform: none !important;
+  }
+
+  .heroCharacter {
+    width: 82%;
+
+    margin: 0 auto;
+  }
+
+
+  /* STATS */
+
+  .statsBand {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  /* SERVICES */
+
+  .serviceGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 20px;
+  }
+
+
+  /* BENEFITS */
+
+  .benefitsGrid,
+  .supportTaskGrid,
+  .aboutSupportGrid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  /* PROCESS */
+
+  .homeProcess {
+    grid-template-columns: 1fr;
+  }
+
+  .processContent {
+    padding:
+      60px 7%;
+  }
+
+  .processImageFill {
+    min-height: 460px;
+  }
+
+  .processImageFill img {
+    min-height: 460px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+
+  .navbar {
+    min-height: 68px;
+
+    padding:
+      9px 14px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 0;
+  }
+
+  .brandLogoBox {
+    flex-shrink: 0;
+  }
+
+  .brandLogoImg {
+    width: 42px;
+    height: 42px;
+
+    object-fit: contain;
+  }
+
+  .brandText {
+    min-width: 0;
+  }
+
+  .brandText h2 {
+    margin: 0;
+
+    font-size: 16px;
+
+    white-space: nowrap;
+  }
+
+  .brandText span {
+    display: block;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+  }
+
+  .mobileMenuBtn {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #1769e0;
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    cursor: pointer;
+  }
+
+  .pageContent {
+    padding-top: 68px;
+  }
+
+
+  /* MOBILE MENU */
+
+  .mobileMenu {
+    position: fixed;
+
+    top: 68px;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    padding:
+      22px 18px
+      26px;
+
+    box-sizing: border-box;
+
+    background: #eef4fb;
+
+    border-top:
+      1px solid
+      rgba(7, 21, 46, 0.08);
+
+    box-shadow:
+      0 18px 40px
+      rgba(15, 23, 42, 0.12);
+
+    z-index: 9998;
+  }
+
+  .mobileMenu a {
+    display: block;
+
+    width: 100%;
+
+    padding:
+      12px 4px;
+
+    color: #07152e;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-decoration: none;
+  }
+
+  .mobileMenuCta {
+    margin-top: 12px;
+
+    padding: 13px 18px !important;
+
+    border-radius: 10px;
+
+    background: #1769e0;
+
+    color: #ffffff !important;
+
+    text-align: center;
+  }
+
+
+  /* =====================================================
+     HOME HERO
+  ===================================================== */
+
+  .premiumHero {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    padding:
+      52px 18px
+      45px;
+
+    gap: 32px;
+
+    overflow: hidden;
+  }
+
+  .premiumHeroContent,
+  .heroContent {
+    width: 100%;
+
+    max-width: 100%;
+
+    text-align: center;
+  }
+
+  .heroBadge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heroTitle {
+    display: block !important;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    margin:
+      14px auto
+      18px;
+
+    font-size:
+      clamp(
+        34px,
+        10vw,
+        46px
+      );
+
+    line-height: 1.05;
+
+    text-align: center;
+  }
+
+  .heroTitle span {
+    display: block;
+
+    white-space: normal !important;
+
+    transform: none !important;
+  }
+
+  .premiumHero p,
+  .heroContent p {
+    max-width: 100%;
+
+    margin:
+      0 auto
+      24px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+
+  /* HERO BUTTONS */
+
+  .heroActions {
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+    align-items: stretch;
+  }
+
+  .heroActions a {
+    width: 100%;
+
+    min-height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+  }
+
+
+  /* TRUST ITEMS */
+
+  .heroTrustRow {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-top: 24px;
+  }
+
+  .heroTrustRow > * {
+    justify-content: center;
+  }
+
+
+  /* HERO IMAGE */
+
+  .heroVisualStage {
+    width: 100%;
+
+    max-width: 420px;
+
+    margin:
+      5px auto
+      0;
+
+    transform: none !important;
+  }
+
+  .heroCharacter {
+    width: 100%;
+
+    max-width: 360px;
+
+    margin: 0 auto;
+
+    display: block;
+  }
+
+
+  /* FLOATING HERO CARDS */
+
+  .floatingCard,
+  .heroFloatingCard {
+    display: none !important;
+  }
+
+
+  /* =====================================================
+     STATS
+  ===================================================== */
+
+  .statsBand {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 0;
+
+    padding:
+      24px 12px;
+  }
+
+  .statsBand > div {
+    padding:
+      18px 8px;
+  }
+
+  .statsBand strong {
+    font-size: 24px;
+  }
+
+  .statsBand span {
+    font-size: 11px;
+  }
+
+
+  /* =====================================================
+     COMMON SECTIONS
+  ===================================================== */
+
+  .services,
+  .whyPrimeCab,
+  .supportTasksSection,
+  .homeProcess,
+  .growthSection,
+  .premiumFaq,
+  .homeCta {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .sectionHead {
+    text-align: center;
+  }
+
+  .sectionHead h2 {
+    font-size:
+      clamp(
+        28px,
+        8vw,
+        38px
+      );
+  }
+
+  .sectionHead p {
+    max-width: 100%;
+  }
+
+
+  /* SERVICES */
+
+  .serviceGrid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  .clickableService {
+    width: 100%;
+  }
+
+
+  /* WHY PRIME CAB */
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .benefitCard {
+    min-height: auto;
+  }
+
+
+  /* SUPPORT TASKS */
+
+  .supportTaskGrid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+  }
+
+
+  /* =====================================================
+     PROCESS
+  ===================================================== */
+
+  .homeProcess {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .processDarkOverlay {
+    width: 100%;
+  }
+
+  .processContent {
+    padding:
+      55px 18px;
+  }
+
+  .processSteps {
+    max-width: 100%;
+  }
+
+  .processSteps > div {
+    min-height: auto;
+
+    padding:
+      18px 16px
+      18px 68px;
+  }
+
+  .processImageFill {
+    min-height: 380px;
+  }
+
+  .processImageFill img {
+    width: 100%;
+    min-height: 380px;
+
+    object-fit: cover;
+  }
+
+
+  /* =====================================================
+     FAQ
+  ===================================================== */
+
+  .premiumFaqLayout {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .premiumFaqAside {
+    padding: 28px 22px;
+  }
+
+  .premiumFaqItem {
+    padding:
+      18px 16px;
+  }
+
+
+  /* =====================================================
+     CTA
+  ===================================================== */
+
+  .homeCta {
+    text-align: center;
+  }
+
+  .homeCta .heroActions {
+    justify-content: center;
+  }
+
+
+  /* WHATSAPP */
+
+  .whatsappWidget {
+    right: 12px;
+    bottom: 16px;
+
+    gap: 8px;
+  }
+
+  .floatingWhatsapp {
+    width: 52px;
+    height: 52px;
+
+    font-size: 25px;
+  }
+
+  .whatsappMessage {
+    padding:
+      9px 12px;
+  }
+
+  .whatsappMessage strong {
+    font-size: 12px;
+  }
+
+  .whatsappMessage span {
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .brandText span {
+    display: none;
+  }
+
+  .heroTitle {
+    font-size:
+      clamp(
+        31px,
+        10vw,
+        40px
+      );
+  }
+
+  .heroTrustRow {
+    grid-template-columns: 1fr;
+  }
+
+  .statsBand {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .premiumHero {
+    padding-top: 40px;
+  }
+
+  .processImageFill,
+  .processImageFill img {
+    min-height: 320px;
+  }
+
+
+  /* don't let help box consume too much screen */
+
+  .whatsappMessage {
+    display: none;
+  }
+
+}
