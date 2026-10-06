@@ -64,7 +64,8 @@ a { text-decoration: none; color: inherit; }
   border-radius: 0;
   background: linear-gradient(135deg, rgba(6, 24, 38, 0.92), rgba(11, 37, 53, 0.88), rgba(15, 118, 110, 0.72));
   backdrop-filter: blur(22px);
-  box-shadow: 0 22px 60px rgba(2, 6, 23, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  /* box-shadow: 0 22px 60px rgba(2, 6, 23, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.12); */
+  box-shadow: none;
 }
 
 /* brand */
@@ -2490,3 +2491,90 @@ a { text-decoration: none; color: inherit; }
   margin: 0 auto 24px;
 }
 
+
+
+
+.navLinks a,
+.navLinks a:hover,
+.navLinks a:focus,
+.navLinks a:active,
+.navLinks a.active {
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  outline: none !important;
+  text-shadow: none !important;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+
+.navLinks a::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    90deg,
+    #5eead4,
+    #38bdf8
+  );
+
+  transform: translateX(-50%);
+
+  transition: width 0.25s ease;
+}
+
+.navLinks a:hover::after,
+.navLinks a.active::after {
+  width: 70%;
+}
+
+
+
+
+
+/* .sectionLabel {
+  background: linear-gradient(
+    90deg,
+    #5eead4,
+    #38bdf8
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+} */
+
+
+
+
+/* .aboutPageHero .sectionLabel {
+  color: #5eead4 !important;
+} */
+
+
+
+.sectionLabel {
+  color: #ffffff !important;
+
+  background: linear-gradient(
+    135deg,
+    #0f766e,
+    #38bdf8
+  );
+
+  border: none;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+}
