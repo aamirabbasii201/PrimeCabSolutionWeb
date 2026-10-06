@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import { BRAND } from "../data/brand";
 import Reveal from "./Reveal";
+import { FaPhoneAlt } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -62,6 +63,46 @@ function Footer() {
   <a href={BRAND.whatsapp} target="_blank" rel="noreferrer">
     WhatsApp: {BRAND.whatsappText}
   </a>
+
+
+<div className="footerPhones">
+  <a
+    href="tel:+923125357945"
+    className="footerPhoneItem"
+  >
+    <span className="countryFlag">🇵🇰</span>
+
+    <div className="footerPhoneText">
+      <span className="phoneCountry">
+        Pakistan
+      </span>
+
+      <strong>
+        +92 312 5357945
+      </strong>
+    </div>
+  </a>
+
+  <a
+    href="tel:+44XXXXXXXXXX"
+    className="footerPhoneItem"
+  >
+    <span className="countryFlag">🇬🇧</span>
+
+    <div className="footerPhoneText">
+      <span className="phoneCountry">
+        United Kingdom
+      </span>
+
+      <strong>
+        +44 XXXX XXXXXX
+      </strong>
+    </div>
+  </a>
+</div>
+
+
+
 
   <a href={`mailto:${BRAND.email}`}>
     Email: {BRAND.email}

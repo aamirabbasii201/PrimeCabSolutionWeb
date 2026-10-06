@@ -19,6 +19,10 @@ function Header() {
     setMenuOpen(false);
   };
 
+
+  const [servicesOpen, setServicesOpen] = useState(false);
+
+
   return (
     <motion.header
       className="navbar"
@@ -45,6 +49,9 @@ function Header() {
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about">About</NavLink>
         <NavLink to="/services">Services</NavLink>
+
+
+        
         <NavLink to="/how-it-works">How It Works</NavLink>
         <NavLink to="/contact">Contact</NavLink>
       </nav>

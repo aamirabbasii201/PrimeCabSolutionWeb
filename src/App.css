@@ -47,15 +47,16 @@ a {
 /* =========================
    HEADER
 ========================= */
-
 .navbar {
   width: 100%;
   margin: 0;
-
   padding: 12px 1.5%;
 
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+
   z-index: 1000;
 
   display: grid;
@@ -72,6 +73,10 @@ a {
   box-shadow: 0 5px 20px rgba(15, 23, 42, 0.07);
 }
 
+/* Push every page below fixed header */
+.pageContent {
+  padding-top: 82px;
+}
 .brand {
   justify-self: start;
 }
@@ -6401,7 +6406,7 @@ body {
 
 .growthBg::after {
   background-image:
-    url("/images/whoweare.webp");
+    url("/images/services.webp");
 }
 
 .growthBg::before {
@@ -7333,4 +7338,1619 @@ body {
 
 .navbar + .premiumHero {
   margin-top: 0 !important;
+}
+
+/* =========================
+   FIXED NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  margin: 0;
+  padding: 12px 1.5%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 1000;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  border: none;
+  border-radius: 0;
+
+  background: #eef4fb;
+
+  box-shadow: 0 5px 20px rgba(15, 23, 42, 0.07);
+}
+
+
+/* =========================
+   PAGE BELOW HEADER
+========================= */
+
+.pageContent {
+  padding-top: 92px;
+}
+
+
+.navLinks {
+  justify-self: center;
+
+  display: flex;
+  align-items: center;
+
+  gap: 30px;
+}
+
+.navLinks a {
+  position: relative;
+
+  display: inline-block;
+
+  padding: 8px 0 10px;
+
+  color: #26364d;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition: color 0.25s ease;
+}
+
+.navLinks a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 0;
+  height: 2px;
+
+  border-radius: 20px;
+
+  background: #1769e0;
+
+  transform: translateX(-50%);
+
+  transition: width 0.25s ease;
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+  color: #1769e0;
+}
+
+.navLinks a:hover::after,
+.navLinks a.active::after {
+  width: 70%;
+}
+
+
+
+
+
+.whyPrimeCab {
+  background: linear-gradient(
+    135deg,
+    #07152e 0%,
+    #0d2a52 50%,
+    #123d73 100%
+  ) !important;
+}
+
+.whyPrimeCab .sectionLabel {
+  color: #8fc0ff !important;
+}
+
+.whyPrimeCab .sectionHead h2 {
+  color: #ffffff !important;
+}
+
+.whyPrimeCab .sectionHead p {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+
+
+
+/* =========================
+   FOOTER PHONE NUMBERS
+========================= */
+
+.footerPhones {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-top: 18px;
+}
+
+.footerPhoneItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  width: fit-content;
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.footerPhoneItem:hover {
+  transform: translateX(4px);
+
+  background: rgba(255, 255, 255, 0.1);
+
+  border-color: rgba(120, 177, 255, 0.3);
+}
+
+.countryFlag {
+  font-size: 25px;
+  line-height: 1;
+}
+
+.footerPhoneItem > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.phoneCountry {
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 11px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.footerPhoneItem strong {
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 650;
+}
+
+
+.footerPhones {
+  display: flex !important;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-top: 20px;
+
+  position: relative;
+  z-index: 5;
+}
+
+.footerPhoneItem {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+
+  width: fit-content;
+
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  text-decoration: none;
+}
+
+.countryFlag {
+  display: block;
+
+  font-size: 27px;
+  line-height: 1;
+}
+
+.footerPhoneText {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.phoneCountry {
+  color: #8fbaf5 !important;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.footerPhoneItem strong {
+  display: block;
+
+  color: #ffffff !important;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footerPhoneItem:hover {
+  background: rgba(255, 255, 255, 0.13);
+
+  transform: translateX(4px);
+}
+
+.whatsappWidget {
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.whatsappMessage {
+  position: relative;
+
+  padding: 11px 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.14);
+}
+
+.whatsappMessage strong {
+  color: #111827;
+
+  font-size: 14px;
+}
+
+.whatsappMessage span {
+  color: #667085;
+
+  font-size: 12px;
+}
+
+.floatingWhatsapp {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #25d366;
+  color: #ffffff;
+
+  font-size: 29px;
+
+  text-decoration: none;
+
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.38);
+}
+
+
+.floatingWhatsapp {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #25d366;
+  color: #ffffff;
+
+  font-size: 29px;
+
+  text-decoration: none;
+
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.38);
+
+  transition: all 0.3s ease;
+}
+
+.floatingWhatsapp:hover {
+  transform: translateY(-6px) scale(1.08);
+
+  background: #20bd5a;
+
+  box-shadow: 0 18px 36px rgba(37, 211, 102, 0.48);
+}
+
+/* .whatsappMessage {
+  opacity: 0;
+  visibility: hidden;
+
+  transform: translateX(10px);
+
+  transition: all 0.3s ease;
+}
+
+.whatsappWidget:hover .whatsappMessage {
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateX(0);
+} */
+
+
+.whatsappWidget {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  animation: whatsappFloat 2.8s ease-in-out infinite;
+}
+
+@keyframes whatsappFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+/* Remove shadow only on Home screen */
+
+.homeWhatsapp .whatsappMessage {
+  box-shadow: none !important;
+}
+
+.homeWhatsapp .floatingWhatsapp {
+  box-shadow: none !important;
+}
+
+
+.clickableService {
+  cursor: pointer;
+
+  border-radius: 20px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.clickableService:hover {
+  transform: translateY(-6px);
+}
+
+.clickableService.active {
+  transform: translateY(-6px);
+}
+
+.clickableService.active .serviceCard {
+  border: 2px solid #1769e0;
+  box-shadow:
+    0 20px 45px
+    rgba(23, 105, 224, 0.16);
+}
+
+
+/* ========================================
+   SERVICE DETAIL PANEL
+======================================== */
+
+.serviceDetailPanel {
+  position: relative;
+
+  max-width: 1100px;
+
+  margin: 45px auto 0;
+
+  padding: 45px;
+
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(23, 105, 224, 0.25),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #07152e 0%,
+      #0d2a52 55%,
+      #123d73 100%
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 25px 60px
+    rgba(7, 21, 46, 0.18);
+
+  animation: servicePanelOpen 0.35s ease;
+}
+
+@keyframes servicePanelOpen {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* close button */
+
+.serviceDetailClose {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  color: #ffffff;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.serviceDetailClose:hover {
+  background:
+    rgba(255, 255, 255, 0.18);
+
+  transform: rotate(90deg);
+}
+
+
+/* content */
+
+.serviceDetailContent {
+  max-width: 760px;
+}
+
+.serviceDetailContent .sectionLabel {
+  color: #8fc0ff;
+}
+
+.serviceDetailContent h2 {
+  margin: 10px 0 16px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(28px, 4vw, 42px);
+}
+
+.serviceDetailContent > p {
+  max-width: 700px;
+
+  color:
+    rgba(255, 255, 255, 0.72);
+
+  font-size: 15px;
+
+  line-height: 1.8;
+}
+
+
+/* points */
+
+.serviceDetailPoints {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 12px 25px;
+
+  margin: 28px 0;
+}
+
+.serviceDetailPoints > div {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color:
+    rgba(255, 255, 255, 0.9);
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.serviceDetailPoints svg {
+  flex-shrink: 0;
+
+  color: #5da0ff;
+}
+
+
+/* CTA */
+
+.serviceDetailBtn {
+  display: inline-flex;
+
+  margin-top: 5px;
+
+  text-decoration: none;
+}
+
+
+/* mobile */
+
+@media (max-width: 700px) {
+  .serviceDetailPanel {
+    margin: 30px 0 0;
+
+    padding: 35px 22px;
+
+    border-radius: 18px;
+  }
+
+  .serviceDetailPoints {
+    grid-template-columns: 1fr;
+  }
+}
+.clickableService {
+  cursor: pointer;
+
+  position: relative;
+
+  border-radius: 20px;
+
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.clickableService:hover {
+  transform: translateY(-7px);
+}
+
+.clickableService:active {
+  transform: translateY(-3px) scale(0.98);
+}
+
+
+/* SELECTED BLOCK */
+
+.clickableService.active {
+  transform: translateY(-9px);
+
+  filter:
+    drop-shadow(
+      0 16px 22px
+      rgba(23, 105, 224, 0.16)
+    );
+}
+
+.clickableService.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -14px;
+
+  width: 10px;
+  height: 10px;
+
+  border-right: 2px solid #1769e0;
+  border-bottom: 2px solid #1769e0;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+}
+
+
+/* DETAIL CARD */
+
+.serviceDetailPanel {
+  position: relative;
+
+  max-width: 1050px;
+
+  margin: 50px auto 20px;
+
+  padding: 45px;
+
+  border-radius: 24px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(61, 139, 255, 0.23),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #07152e 0%,
+      #0d2a52 55%,
+      #123d73 100%
+    );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 25px 60px
+    rgba(7, 21, 46, 0.18);
+
+  animation:
+    serviceDetailsMove 0.45s
+    cubic-bezier(.2, .8, .2, 1);
+}
+
+@keyframes serviceDetailsMove {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(30px)
+      scale(0.97);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+.clickableService {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.clickableService:hover {
+  transform: translateY(-5px);
+}
+
+.clickableService.active {
+  transform: translateY(-8px);
+}
+
+.serviceDetailContent .sectionLabel {
+  color: #ffffff !important;
+}
+
+
+.serviceSeeMore {
+  width: calc(100% - 32px);
+
+  margin: 0 16px 16px;
+  padding: 11px 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #edf4ff;
+
+  color: #1769e0;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.serviceSeeMore span {
+  font-size: 18px;
+
+  transition: transform 0.25s ease;
+}
+
+.serviceSeeMore:hover {
+  background: #1769e0;
+  color: #ffffff;
+}
+
+.serviceSeeMore:hover span {
+  transform: translateX(4px);
+}
+
+.clickableService.active .serviceSeeMore {
+  background: #1769e0;
+  color: #ffffff;
+}
+
+.serviceCard {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+}
+
+.serviceCardContent {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 22px;
+}
+
+.serviceCardContent p {
+  margin-bottom: 20px;
+}
+
+.serviceSeeMore {
+  width: 100%;
+
+  margin-top: auto;
+  padding: 14px 0 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border: none;
+  border-top: 1px solid
+    rgba(23, 105, 224, 0.12);
+
+  background: transparent;
+
+  color: #1769e0;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: color 0.25s ease;
+}
+
+.serviceSeeMore:hover {
+  color: #0b3a74;
+}
+
+.seeMoreArrow {
+  font-size: 18px;
+
+  transition: transform 0.25s ease;
+}
+
+.serviceSeeMore:hover .seeMoreArrow {
+  transform: translateX(5px);
+}
+
+.clickableService.active .serviceSeeMore {
+  color: #0b3a74;
+}
+
+/* ================= SEE MORE LINK ================= */
+
+/* ================= SEE MORE LINK ================= */
+
+.clickableService {
+  position: relative;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+.clickableService > .serviceCard {
+  width: 100%;
+}
+
+.clickableService .cardArrow {
+  display: none;
+}
+
+.clickableService .serviceBody {
+  padding-bottom: 78px;
+}
+
+.seeMoreLink {
+  position: absolute;
+  left: 28px;
+  bottom: 28px;
+  z-index: 3;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 900;
+  color: #1f4aa0;
+  cursor: pointer;
+  transition: color 0.25s ease;
+}
+
+.seeMoreLink:hover {
+  color: #14306a;
+}
+
+.seeMoreLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #14306a, #38bdf8);
+  transition: width 0.25s ease;
+}
+
+.seeMoreLink:hover::after {
+  width: 100%;
+}
+
+.seeMoreLink svg {
+  transition: transform 0.25s ease;
+}
+
+.seeMoreLink:hover svg {
+  transform: translateX(5px);
+}
+/* ================= HOW IT WORKS PAGE ================= */
+
+.howSteps {
+  padding: 95px 7%;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(224, 189, 90, 0.14), transparent 32%),
+    linear-gradient(180deg, #fbf9f4 0%, #f3ede0 100%);
+}
+
+.howStepsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.howStepsGrid > div {
+  display: flex;
+}
+
+.howDetailCard {
+  width: 100%;
+  position: relative;
+  padding: 34px;
+  border-radius: 30px;
+  background:
+    linear-gradient(#ffffff, #fbf9f4) padding-box,
+    linear-gradient(135deg, rgba(246, 231, 176, 0.95), rgba(201, 161, 58, 0.55) 45%, rgba(20, 48, 106, 0.5)) border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  transition: 0.28s ease;
+}
+
+.howDetailCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 64px rgba(8, 17, 31, 0.14);
+}
+
+.howNumber {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 46px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1;
+  background: linear-gradient(135deg, #1f4aa0, #0a1a33);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.howDetailCard h3 {
+  margin: 0 0 12px;
+  font-size: 23px;
+  letter-spacing: -0.5px;
+  color: #0a1a33;
+}
+
+.howDetailCard > p {
+  margin: 0 0 20px;
+  color: #55607a;
+  line-height: 1.75;
+}
+
+.howChecklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 12px;
+}
+
+.howChecklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #0a1a33;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.howChecklist svg,
+.howNeedsList svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #c9a13a;
+}
+
+/* ---------- What we need ---------- */
+
+.howNeeds {
+  padding: 95px 7%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 90% 10%, rgba(31, 74, 160, 0.35), transparent 40%),
+    linear-gradient(135deg, #050d1c 0%, #0a1a33 50%, #14306a 100%);
+}
+
+.howNeeds h2 {
+  margin: 0 0 18px;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -1.8px;
+  color: #ffffff;
+}
+
+.howNeeds p {
+  margin: 0;
+  max-width: 520px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d5dcea;
+}
+
+.howNeeds .sectionLabel {
+  color: #f6e7b0;
+  background: rgba(246, 231, 176, 0.12);
+  border: 1px solid rgba(246, 231, 176, 0.45);
+}
+
+.howNeedsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.howNeedsList div {
+  padding: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  border-radius: 24px;
+  font-weight: 700;
+  line-height: 1.55;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(224, 189, 90, 0.4);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1100px) {
+  .howNeeds {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 900px) {
+  .howStepsGrid,
+  .howNeedsList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .howSteps,
+  .howNeeds {
+    padding: 65px 5%;
+  }
+
+  .howDetailCard {
+    padding: 26px;
+  }
+}
+/* ================= WHAT TO EXPECT (NEW LAYOUT) ================= */
+
+.howExpect {
+  padding: 95px 7%;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(20, 48, 106, 0.1), transparent 34%),
+    radial-gradient(circle at 0% 100%, rgba(224, 189, 90, 0.16), transparent 34%),
+    linear-gradient(180deg, #f3ede0 0%, #fbf9f4 100%);
+}
+
+.expectLayout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+/* ---------- Left panel ---------- */
+
+.expectPanel {
+  position: relative;
+  overflow: hidden;
+  padding: 46px;
+  border-radius: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(224, 189, 90, 0.3), transparent 42%),
+    linear-gradient(145deg, #1f4aa0 0%, #14306a 30%, #0a1a33 75%, #050d1c 100%);
+  border: 1px solid rgba(224, 189, 90, 0.4);
+  box-shadow: 0 30px 80px rgba(5, 13, 28, 0.3);
+}
+
+.expectPanel .sectionLabel {
+  color: #f6e7b0;
+  background: rgba(246, 231, 176, 0.12);
+  border: 1px solid rgba(246, 231, 176, 0.45);
+}
+
+.expectPanel h2 {
+  margin: 0 0 18px;
+  font-size: clamp(32px, 3.4vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -1.6px;
+  background: linear-gradient(180deg, #ffffff 30%, #f6e7b0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  padding-bottom: 0.08em;
+}
+
+.expectPanel p {
+  margin: 0 0 28px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #d5dcea;
+}
+
+.expectPromises {
+  margin: 0 0 34px;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.expectPromises li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.expectPromises svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #e0bd5a;
+}
+
+/* ---------- Right cards ---------- */
+
+.expectGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.expectGrid > div {
+  display: flex;
+}
+
+.expectCard {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 32px 30px 36px;
+  border-radius: 28px;
+  background:
+    linear-gradient(#ffffff, #fbf9f4) padding-box,
+    linear-gradient(135deg, rgba(246, 231, 176, 0.95), rgba(201, 161, 58, 0.55) 45%, rgba(20, 48, 106, 0.5)) border-box;
+  border: 1px solid transparent;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.08);
+  transition: 0.28s ease;
+}
+
+.expectCard::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  background: linear-gradient(135deg, #f6e7b0, #c9a13a, #a67c1f);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+}
+
+.expectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 64px rgba(8, 17, 31, 0.14);
+}
+
+.expectCard:hover::after {
+  transform: scaleX(1);
+}
+
+.expectIndex {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  line-height: 1;
+  color: rgba(10, 26, 51, 0.07);
+}
+
+.expectIcon {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 22px;
+  border-radius: 17px;
+  display: grid;
+  place-items: center;
+  font-size: 21px;
+  color: #f6e7b0;
+  background: linear-gradient(145deg, #1f4aa0 0%, #0a1a33 70%);
+  border: 1px solid rgba(224, 189, 90, 0.55);
+  box-shadow: 0 14px 28px rgba(8, 17, 31, 0.25);
+}
+
+.expectCard h3 {
+  margin: 0 0 10px;
+  font-size: 21px;
+  letter-spacing: -0.4px;
+  color: #0a1a33;
+}
+
+.expectCard p {
+  margin: 0;
+  color: #55607a;
+  line-height: 1.75;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1100px) {
+  .expectLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .howExpect {
+    padding: 65px 5%;
+  }
+
+  .expectPanel {
+    padding: 32px 26px;
+    border-radius: 28px;
+  }
+
+  .expectGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= SERVICE BLOCK NUMBERS: BLUE GRADIENT ================= */
+/* ================= SERVICE BLOCK NUMBERS: ROYAL BLUE SQUARE ================= */
+
+/* ================= SERVICE NUMBERS: SAME AS "WHAT TO EXPECT" ICONS ================= */
+
+.serviceCard .icon,
+.serviceImage .icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 17px;
+  font-size: 22px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  background: linear-gradient(145deg, #1f4aa0 0%, #0a1a33 70%);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: #f6e7b0;
+  color: #f6e7b0;
+  border: 1px solid rgba(224, 189, 90, 0.55);
+  box-shadow: 0 14px 28px rgba(8, 17, 31, 0.25);
+}
+
+.serviceCard .icon::before,
+.serviceImage .icon::before {
+  display: none;
+}
+
+
+
+
+/* ================= ABOUT PAGE NUMBERS: SAME AS "WHAT TO EXPECT" ICONS ================= */
+
+.aboutValueImage .valueNumber,
+.valueCard .valueNumber {
+  width: 54px;
+  height: 54px;
+  border-radius: 17px;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  background: linear-gradient(145deg, #1f4aa0 0%, #0a1a33 70%);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: #f6e7b0;
+  color: #f6e7b0;
+  border: 1px solid rgba(224, 189, 90, 0.55);
+  box-shadow: 0 14px 28px rgba(8, 17, 31, 0.25);
+}
+
+.aboutValueImage .valueNumber::before,
+.valueCard .valueNumber::before {
+  display: none;
+}
+
+
+
+
+
+/* =====================================================================
+   HOME FIXES: attached header, smaller hero title, premium icons,
+   blue/gold arrows and cards, no circles in Why PrimeCab
+   ===================================================================== */
+
+/* ---------- 1. Header attached to the page ---------- */
+
+.navbar {
+  width: 100% !important;
+  margin: 0 !important;
+  top: 0 !important;
+  border-radius: 0 !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 1px solid rgba(224, 189, 90, 0.45) !important;
+}
+
+/* ---------- 2. Smaller hero title lines ---------- */
+
+/* .premiumHeroText .heroTitle {
+  font-size: clamp(30px, 3.6vw, 52px) !important;
+  line-height: 1.12 !important;
+  letter-spacing: -1.2px !important;
+  margin: 0 0 22px !important;
+}
+
+.premiumHeroText .heroTitle span {
+  display: block;
+} */
+
+/* ---------- 3. Premium icons (same as "What To Expect") ---------- */
+
+/* .benefitIcon,
+.supportTaskIcon,
+.heroTrustRow svg,
+.floatingCard svg {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  border-radius: 17px !important;
+  display: grid;
+  place-items: center;
+  padding: 14px;
+  font-size: 21px;
+  color: #f6e7b0 !important;
+  background: linear-gradient(145deg, #1f4aa0 0%, #0a1a33 70%) !important;
+  border: 1px solid rgba(224, 189, 90, 0.55) !important;
+  box-shadow: 0 14px 28px rgba(8, 17, 31, 0.25) !important;
+}
+
+.benefitIcon svg,
+.supportTaskIcon svg {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #f6e7b0 !important;
+}
+
+.heroTrustRow svg {
+  margin-bottom: 12px;
+}
+
+.growthChecklist svg,
+.faqAsidePoints svg {
+  color: #c9a13a !important;
+} */
+
+/* ---------- 4. Arrows: blue square, gold arrow ---------- */
+
+.cardArrow {
+  background: linear-gradient(145deg, #1f4aa0 0%, #0a1a33 70%) !important;
+  color: #f6e7b0 !important;
+  border: 1px solid rgba(224, 189, 90, 0.55) !important;
+}
+
+.cardArrow:hover {
+  background: linear-gradient(135deg, #f6e7b0, #c9a13a, #a67c1f) !important;
+  color: #0a1a33 !important;
+}
+
+.textLink {
+  color: #1f4aa0 !important;
+  font-weight: 900;
+}
+
+.textLink svg,
+.faqContactBtn svg {
+  color: #c9a13a;
+  transition: transform 0.25s ease;
+}
+
+.textLink:hover {
+  color: #14306a !important;
+}
+
+.textLink:hover svg,
+.faqContactBtn:hover svg {
+  transform: translateX(6px);
+}
+
+/* ---------- 5. "What We Do" blocks ---------- */
+
+.servicesBg .serviceCard,
+.servicesBg .imageServiceCard {
+  background:
+    linear-gradient(#ffffff, #fbf9f4) padding-box,
+    linear-gradient(135deg, rgba(246, 231, 176, 0.95), rgba(201, 161, 58, 0.55) 45%, rgba(20, 48, 106, 0.5)) border-box !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.08) !important;
+}
+
+.servicesBg .serviceCard:hover {
+  box-shadow: 0 28px 64px rgba(8, 17, 31, 0.16) !important;
+}
+
+.servicesBg .serviceCard h3 {
+  color: #0a1a33 !important;
+}
+
+.servicesBg .serviceCard p {
+  color: #55607a !important;
+}
+
+.servicesBg .serviceImage .icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 17px;
+  font-size: 22px;
+  font-weight: 900;
+  background: linear-gradient(145deg, #1f4aa0 0%, #0a1a33 70%) !important;
+  -webkit-text-fill-color: #f6e7b0;
+  color: #f6e7b0 !important;
+  border: 1px solid rgba(224, 189, 90, 0.55) !important;
+  box-shadow: 0 14px 28px rgba(8, 17, 31, 0.25) !important;
+}
+
+.servicesBg .serviceImage .icon::before {
+  display: none;
+}
+
+/* ---------- 6. Why PrimeCab: remove the background circles ---------- */
+
+.whyPrimeCab,
+.whyBg {
+  background: linear-gradient(180deg, #fbf9f4 0%, #f3ede0 100%) !important;
+  background-image: linear-gradient(180deg, #fbf9f4 0%, #f3ede0 100%) !important;
+}
+
+.whyPrimeCab::before,
+.whyPrimeCab::after,
+.whyBg::before,
+.whyBg::after {
+  content: none !important;
+  display: none !important;
+}
+
+.whyPrimeCab .benefitCard {
+  background:
+    linear-gradient(#ffffff, #fbf9f4) padding-box,
+    linear-gradient(135deg, rgba(246, 231, 176, 0.95), rgba(201, 161, 58, 0.55) 45%, rgba(20, 48, 106, 0.5)) border-box !important;
+  border: 1px solid transparent !important;
+}
+
+.whyPrimeCab .benefitCard h3 {
+  color: #0a1a33 !important;
+}
+
+.whyPrimeCab .benefitCard p {
+  color: #55607a !important;
+}
+
+/* ================= WHY PRIMECAB: PREMIUM NAVY + GOLD ================= */
+
+.whyPrimeCab,
+.whyBg {
+  background: linear-gradient(135deg, #050d1c 0%, #0a1a33 45%, #14306a 100%) !important;
+  background-image: linear-gradient(135deg, #050d1c 0%, #0a1a33 45%, #14306a 100%) !important;
+  color: #ffffff;
+}
+
+/* no circles */
+.whyPrimeCab::before,
+.whyPrimeCab::after,
+.whyBg::before,
+.whyBg::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* heading area */
+.whyPrimeCab .sectionLabel {
+  color: #f6e7b0 !important;
+  background: rgba(246, 231, 176, 0.12) !important;
+  border: 1px solid rgba(246, 231, 176, 0.45) !important;
+}
+
+.whyPrimeCab .sectionHead h2 {
+  background: linear-gradient(180deg, #ffffff 30%, #f6e7b0 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+  padding-bottom: 0.08em;
+}
+
+.whyPrimeCab .sectionHead p {
+  color: #d5dcea !important;
+}
+
+/* cards */
+.whyPrimeCab .benefitCard {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03)) !important;
+  border: 1px solid rgba(224, 189, 90, 0.4) !important;
+  box-shadow: 0 20px 50px rgba(5, 13, 28, 0.35) !important;
+  backdrop-filter: blur(14px);
+}
+
+.whyPrimeCab .benefitCard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(246, 231, 176, 0.75) !important;
+  box-shadow: 0 28px 64px rgba(5, 13, 28, 0.5) !important;
+}
+
+.whyPrimeCab .benefitCard h3 {
+  color: #ffffff !important;
+}
+
+.whyPrimeCab .benefitCard p {
+  color: #d5dcea !important;
+}
+
+/* icons on the dark background */
+.whyPrimeCab .benefitIcon {
+  background: linear-gradient(145deg, #2b5fd0 0%, #14306a 75%) !important;
+  border: 1px solid rgba(246, 231, 176, 0.6) !important;
+}
+
+/* ================= HERO BADGE: MOVE DOWN ================= */
+
+.premiumHeroText .badge {
+  margin-top: 36px;
+}
+
+@media (max-width: 768px) {
+  .premiumHeroText .badge {
+    margin-top: 20px;
+  }
 }
